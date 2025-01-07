@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8"></meta>
+    <link rel="icon" href="https://cumtb.tos-cn-beijing.volces.com/%E5%B0%8F%E7%85%A4%E7%90%83%E5%8D%A1%E9%80%9A%E5%BD%A2%E8%B1%A1.png">
+    <title>小煤球AI</title>
+    <style>
+        body{
+            background-color: hsl(120, 82%, 98%);
+        }
+        /* 自定义悬浮入口的位置 */
+        #position_demo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 打字机效果的样式 */
+        #position_demo h1 {
+            white-space: nowrap;
+            overflow: hidden;
+            color: black;
+            border-right: 2px solid; /* 模拟光标 */
+            width: 0;
+            animation: typing 4s steps(29, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+
+        /* 打字机效果的动画 */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* 光标的闪烁效果 */
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+       
+        /* @keyframes colorChange {
+            0% { color: red; }
+            25% { color: orange; }
+            50% { color: yellow; }
+            75% { color: green; }
+            100% { color: blue; }
+        }
+
+        #position_demo h1 {
+            animation: colorChange  infinite;
+        } */
+
+        /* 在你的样式表中添加以下 CSS */
+        div.ab1ac9d9bab12da47298 {
+            background-image: url('https://hsnc.tos-cn-beijing.volces.com/%E5%B0%8F%E6%B0%A2AI.png') !important;
+            background-size: cover;
+            background-position: center;
+        }
+
+        div.ab1ac9d9bab12da47298 img {
+            display: none; /* 隐藏原来的 img 元素 */
+            
+        }
+    </style>
+</head>
+<body>
+<div id="position_demo"><h1>Hello, 我是小煤球 AI, 点击右下角和我对话吧</h1></div>
+<div id="id1" style="width: 99vw; height: 97vh"></div>
+<div id="idy_floatdiv" 
+    style="
+        z-index:2000;
+        position:fixed;
+        display:flex;
+        right:0;
+        bottom:25%;
+        width:30px;
+        border-top-left-radius:6px;
+        border-bottom-left-radius:6px;
+        height:100px;
+        background:#618cfa;
+        line-height: 24px;
+        writing-mode:vertical-rl;
+        align-items:center;
+        justify-content:center;
+        font-family:PingFangSC-Regular;
+        font-size:16px;
+    "> 
+    <a href="https://wj.qq.com/s2/16731876/e062/" target="blank" style="color:#FFFFFF;text-decoration:none;">
+        我要反馈
+    </a> 
+</div>
+<script>
+    // 计算文本的实际宽度并设置给 h1 元素
+    document.addEventListener('DOMContentLoaded', function() {
+        const h1 = document.querySelector('#position_demo h1');
+        const text = h1.textContent;
+        h1.textContent = ''; // 清空内容以便计算宽度
+        const span = document.createElement('span');
+        span.style.visibility = 'hidden';
+        span.style.whiteSpace = 'nowrap';
+        span.textContent = text;
+        document.body.appendChild(span);
+        const width = span.offsetWidth;
+        document.body.removeChild(span);
+        h1.style.width = width + 'px';
+        h1.textContent = text; // 恢复内容
+    });
+</script>
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.0.0-beta.4/libs/cn/index.js"></script>
+<script>
+    cozeWebSDK = new CozeWebSDK.WebChatClient({
+        config: {
+            bot_id: '7447073134009745434',
+        },
+        componentProps: {
+            title: 'h2',
+        },
+        userInfo: {
+            url: 'https://lf-coze-web-cdn.coze.cn/obj/coze-web-cn/obric/coze/favicon.1970.png'
+        },
+        ui: {
+            base: {
+                icon: 'https://cumtb.tos-cn-beijing.volces.com/%E6%A0%A1%E5%BE%BD.jpg',
+                layout: 'pc',
+                zIndex: 1000,
+                lang: 'zh-CN'
+            },
+            asstBtn: {
+                isNeed: true,
+            },
+            footer: {
+                isShow: true,
+                expressionText: 'Powered by {{name}}',
+                linkvars: {
+                    name: {
+                        text: '小煤球产研团队',
+                        link: ''
+                    },
+                    // name1: {
+                    //     text: '氢界',
+                    //     link: 'https://www.chinah2data.com/'
+                    // }
+                }
+            },
+            chatBot: {
+                title: "小煤球AI | Hello 矿大！",
+                uploadable: true,
+                width: '100%',
+                el: document.getElementById('id1'),
+                onHide: () => {
+                    const floatDiv = document.getElementById('idy_floatdiv');
+                    floatDiv.style.display = 'none';
+                },
+                onShow: () => {
+                    const floatDiv = document.getElementById('idy_floatdiv');
+                    floatDiv.style.display = 'flex';
+                },
+            },
+        },
+    });
+    cozeWebSDK.showChatBot()
+
+window.onload = function() {
+     // 使用 data-testid 属性选择按钮元素
+
+};
+
+</script>
+</body>
+
+
+</html>
