@@ -1,36 +1,7 @@
 # school-ai
 
-#### Description
-高校AI助手
+#### 介绍
+小煤球 AI 是专为中国矿业大学学生量身打造的智能问答助手。它依托学校学生工作相关的私有化内部数据，以 RAG（检索增强生成）技术为核心构建而成，致力于精准、高效地解答同学们在学习、生活等各方面遇到的问题，为矿大学子提供便捷、专属的智能服务体验。
 
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 软件架构
+此项目仅为前端页面，依赖扣子后端服务
